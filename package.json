@@ -1,0 +1,77 @@
+{
+  "name": "rich-product-search",
+  "version": "1.0.0",
+  "description": "A rich product search component by Nologis",
+  "keywords": [
+    "Nologis",
+    "component",
+    "rich product",
+    "search"
+  ],
+  "license": "ISC",
+  "author": {
+    "name": "Nologis",
+    "email": "info@nologis.com",
+    "url": "https://nologis.com"
+  },
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nologis/rich-product-search"
+  },
+  "scripts": {
+    "build": "npm run clean && webpack --mode production",
+    "dev": "webpack-dev-server --mode development",
+    "clean": "shx rm -rf dist lib",
+    "lint": "tslint -p ./tsconfig.json",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@nologis/utils": "^1.0.1",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.2.2",
+    "@types/react": "^16.3.1",
+    "@types/react-dom": "^16.0.4",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jest": "^22.4.3",
+    "prettier": "^1.11.1",
+    "shx": "^0.2.2",
+    "ts-jest": "^22.4.2",
+    "ts-loader": "^4.1.0",
+    "tslint-config-prettier": "^1.10.0",
+    "typescript": "^2.8.1",
+    "webpack": "^4.4.1",
+    "webpack-cli": "^2.0.13",
+    "webpack-dev-server": "^3.1.1"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/config/jest/preprocessor.js"
+    },
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "testRegex": "(/test/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleNameMapper": {
+      "\\.(css|jpg|png|svg)$": "<rootDir>/node_modules/jest-css-modules"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ],
+    "setupFiles": [
+      "<rootDir>/config/jest/setup.js"
+    ]
+  },
+  "pre-push": [
+    "lint",
+    "test",
+    "build"
+  ]
+}

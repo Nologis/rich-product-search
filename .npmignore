@@ -1,0 +1,9 @@
+src/
+test/
+config/
+webpack.config.js
+.scripts/
+.idea/
+.prettierrc
+tsconfig.json
+tslint.json
