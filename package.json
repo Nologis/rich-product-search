@@ -20,6 +20,7 @@
     "url": "https://github.com/nologis/rich-product-search"
   },
   "scripts": {
+    "package-demo": "sh .scripts/package-demo.sh",
     "build": "npm run clean && webpack --mode production",
     "build-library": "shx rm -rf dist/library && webpack --mode production  --config config/library/webpack.config.js",
     "clean": "shx rm -rf dist",
