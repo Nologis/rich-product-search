@@ -1,20 +1,9 @@
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-
 module.exports = {
   entry: {
-    'index': './src/index.tsx'
+    'index': './config/dev/index.tsx'
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js']
-  },
-  externals: {
-    react: {
-      commonjs: 'react',
-      commonjs2: 'react',
-      amd: 'React',
-      root: 'React'
-    },
-    'mobx-react': 'mobx-react'
   },
   module: {
     rules: [
@@ -50,34 +39,8 @@ module.exports = {
   output: {
     libraryTarget: 'umd'
   },
-  plugins: [
-    new DtsBundlePlugin()
-  ],
-  optimization: {
-    minimizer: [
-      new UglifyJsPlugin({
-        uglifyOptions: {
-          compress: {
-            warnings: false
-          }
-        }
-      })
-    ]
+  devServer: {
+    index: './config/dev/index.html',
+    contentBase: './config/dev'
   }
-};
-
-function DtsBundlePlugin() {
-}
-
-DtsBundlePlugin.prototype.apply = function(compiler) {
-  compiler.hooks.afterEmit.tap('DtsBundlePlugin', function() {
-    const dts = require('dts-bundle');
-    dts.bundle({
-      name: '@nologis/rich-product-search',
-      main: '.dts/index.d.ts',
-      out: '../dist/index.d.ts',
-      removeSource: true,
-      outputAsModuleFolder: true
-    });
-  });
 };

@@ -5,7 +5,11 @@ export interface IProps {
 }
 
 export default class RichProductSearch extends React.Component<IProps, {}> {
-  public render() {
+  render() {
+    const { apiKey } = this.props;
+    if (!apiKey) {
+      return <h1>API Key not found!</h1>;
+    }
     return <h1>RichProductSearch</h1>;
   }
 }

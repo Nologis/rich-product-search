@@ -1,2 +1,4 @@
 node_modules
 dist
+.dts
+config/dev/index.html

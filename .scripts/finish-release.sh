@@ -13,9 +13,10 @@ if [ $# != 1 ]; then
   error "Please specify the version number: npm run finish-release 10.0.1"
 fi
 
+npm run lint
+npm run test
 npm run clean
 npm run build
-npm run test
 
 NEW_VERSION=$1
 BRANCH=`git rev-parse --abbrev-ref HEAD`

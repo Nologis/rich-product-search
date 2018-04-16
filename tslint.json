@@ -4,9 +4,17 @@
     "tslint-config-prettier"
   ],
   "rules": {
+    "member-access": [
+      true,
+      "no-public"
+    ],
+    "ordered-imports": false,
+    "object-literal-sort-keys": false,
     "no-implicit-dependencies": [
       true,
       "dev"
-    ]
+    ],
+    "interface-name": false,
+    "member-ordering": false
   }
 }

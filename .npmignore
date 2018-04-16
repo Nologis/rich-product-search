@@ -7,3 +7,7 @@ webpack.config.js
 .prettierrc
 tsconfig.json
 tslint.json
+.travis.yml
+.editorconfig
+dist/.dts
+dist/library

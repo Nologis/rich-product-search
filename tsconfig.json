@@ -5,11 +5,20 @@
     "target": "es6",
     "jsx": "react",
     "outDir": "lib",
+    "allowSyntheticDefaultImports": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "forceConsistentCasingInFileNames": true,
     "sourceMap": false,
-    "experimentalDecorators": true
+    "declaration": true,
+    "declarationDir": "../.dts",
+    "experimentalDecorators": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ]
   },
-  "files": [
-    "./src/index.tsx"
+  "include": [
+    "src",
+    "types"
   ],
   "exclude": [
     "dist",
