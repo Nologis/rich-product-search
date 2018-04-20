@@ -1,4 +1,3 @@
-import { Logger } from '@nologis/utils';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import RichProductSearch from './containers/RichProductSearch';

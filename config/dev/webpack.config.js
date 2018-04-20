@@ -8,7 +8,6 @@ module.exports = {
   module: {
     rules: [
       { test: /\.tsx?$/, use: 'ts-loader', exclude: /node_modules/ },
-      { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'file-loader' },
       {
         test: /\.css?$/, use: [
           'style-loader',
@@ -33,7 +32,8 @@ module.exports = {
             }
           }
         ]
-      }
+      },
+      { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'file-loader' }
     ]
   },
   output: {

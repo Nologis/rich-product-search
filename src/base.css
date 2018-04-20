@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'nologis-icon-font';
+  src: url("../theme/nologis_icons.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*!**!*/
+/*@import "~@nologis/ui-components/dist/theme/theme.css";*/
