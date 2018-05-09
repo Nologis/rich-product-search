@@ -1,0 +1,71 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  padding: 0 10px;
+  max-width: 1170px;
+  margin: auto;
+  padding-top: 60px;
+  position: relative;
+}
+
+.containerCollapsed {
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+  position: relative;
+}
+
+.searchIcon {
+  color: #9FB3C2;
+  font-family: nologis-icon-font, serif;
+  font-size: 2em;
+  position: absolute;
+  display: block;
+  padding: 0 20px;
+}
+
+.container input {
+  width: 100%;
+  height: 70px;
+  background: #F6FAFE;
+  border: 0;
+  font-size: 2em;
+  font-family: OpenSans, serif;
+  font-weight: 700;
+  color: #385871;
+  text-align: left;
+  line-height: 30px;
+  padding: 0 60px;
+}
+
+.container input::placeholder {
+  color: #9FB3C2;
+}
+
+.container input:focus {
+  outline: none;
+}
+
+.filtersIcon {
+  font-family: nologis-icon-font, serif;
+  color: #bcbcbc;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  padding: 0 20px;
+  font-size: 2em;
+}
+
+.filtersIcon:hover {
+  color: #1E1E1E;
+}
+
+.separator {
+  border-right: 1px solid #eaeaea;
+  margin: 0 10px;
+}
+
+.collapseIcon {
+  font-family: nologis-icon-font, serif;
+  color: #bcbcbc;
+}

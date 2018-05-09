@@ -1,7 +1,9 @@
 import * as React from 'react';
+import * as style from './RichProductSearch.css';
 
 import { Logger } from '@nologis/utils';
-import { Autocomplete, UniqueItem } from '@nologis/ui-components';
+import { Autocomplete } from '../components/autocomplete/Autocomplete';
+import { UniqueItem } from '../types/UniqueItem';
 import NologisAPI from '../api/NologisAPI';
 
 export interface IProps {
@@ -39,7 +41,7 @@ export default class RichProductSearch extends React.Component<IProps, {}> {
     if (!apiKey) {
       return <h1>API Key not found!</h1>;
     }
-    return <Autocomplete placeholder="Search ddd"
+    return <Autocomplete placeholder="Start typing to search"
                          dataset={dataset}
                          filterFunction={this.searchFunction}
                          onItemClick={itemClick}/>;
