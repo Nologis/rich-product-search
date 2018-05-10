@@ -5,6 +5,10 @@
   max-width: 1170px;
   margin: auto;
   position: relative;
+  margin-top: -5px;
+  padding-top: 10px;
+  background: #FFF;
+  border-radius: 0 0 5px 5px;
 }
 
 .container > div:last-child {

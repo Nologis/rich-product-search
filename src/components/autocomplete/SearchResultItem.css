@@ -4,47 +4,21 @@
   flex-direction: row;
   min-height: 40px;
   cursor: pointer;
-  background: #FFF;
-  padding: 8px 20px;
-}
-
-.container:hover {
-  background: #bcbcbc;
+  padding: 0 20px;
 }
 
 .container:hover {
   background: #F6FAFE;
 }
 
-.brandIco {
-  display: block;
-  width: 32px;
-  height: 32px;
-  font-family: dlm-map, serif;
-  border-radius: 50%;
-  color: #FFF;
-  font-size: 16px;
-  text-align: center;
-  line-height: 32px;
-  margin-right: 5px;
-}
-
-.infoContainer {
+.container span {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  font-family: OpenSans-Bold, sans-serif;
+  font-size: 1.125em;
+  color: #9FB3C2;
 }
 
-.infoContainer > span:first-child {
-  font-size: 14px;
-  font-family: OpenSans-Bold, serif;
-  color: #000;
-  text-align: left;
-}
 
-.infoContainer > span:last-child {
-  font-size: 12px;
-  font-family: OpenSans-Semibold, serif;
-  color: #bcbcbc;
-  text-align: left;
-}
 

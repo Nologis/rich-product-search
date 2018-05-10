@@ -14,7 +14,7 @@ export default class SearchInput extends React.Component<IProps, {}> {
     super(props);
 
     this.onInputChange = this.onInputChange.bind(this);
-    this.onFilterIconClick = this.onFilterIconClick.bind(this);
+    // this.onFilterIconClick = this.onFilterIconClick.bind(this);
   }
 
   onInputChange(event) {
@@ -23,20 +23,20 @@ export default class SearchInput extends React.Component<IProps, {}> {
     }
   }
 
-  onFilterIconClick() {
-    if (this.props.onFilterIconClick) {
-      this.props.onFilterIconClick();
-    }
-  }
+  // onFilterIconClick() {
+  //   if (this.props.onFilterIconClick) {
+  //     this.props.onFilterIconClick();
+  //   }
+  // }
 
   render() {
     const inputProps = {
       placeholder: this.props.placeholder
     };
     return <div className={style.container}>
-      <i title='Buscar' className={style.searchIcon}>]</i>
+      <span title='Buscar' className={style.searchIcon}>]</span>
       <input {...inputProps} onChange={this.onInputChange}/>
-      <i title='Filtrar' className={style.filtersIcon} onClick={this.onFilterIconClick}>]</i>
     </div>;
+    // <span title='Filtrar' className={style.filtersIcon} onClick={this.onFilterIconClick}>]</span>
   }
 }
