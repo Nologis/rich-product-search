@@ -8,6 +8,7 @@ import NologisAPI from '../api/NologisAPI';
 
 export interface IProps {
   apiKey: string;
+  placeholder?: string;
 }
 
 const dataset: UniqueItem[] = [
@@ -24,6 +25,10 @@ function itemClick(item: UniqueItem) {
 export default class RichProductSearch extends React.Component<IProps, {}> {
   nologisAPI: NologisAPI;
 
+  static defaultProps: Partial<IProps> = {
+    placeholder: 'Start typing to search'
+  };
+
   constructor(props: IProps) {
     super(props);
 
@@ -37,11 +42,11 @@ export default class RichProductSearch extends React.Component<IProps, {}> {
 
 
   render() {
-    const { apiKey } = this.props;
+    const { apiKey, placeholder } = this.props;
     if (!apiKey) {
       return <h1>API Key not found!</h1>;
     }
-    return <Autocomplete placeholder="Start typing to search"
+    return <Autocomplete placeholder={placeholder}
                          dataset={dataset}
                          filterFunction={this.searchFunction}
                          onItemClick={itemClick}/>;
